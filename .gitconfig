@@ -5,14 +5,11 @@
   remote = yellow
 
 [apply]
-
-    # Detect whitespace errors when applying a patch
-    whitespace = fix
+  whitespace = fix
 
 [core]
-
-    editor = vim
+  editor = vim
 
 [user]
   name = Bekzod Tursunov
-	email = bekzod97@hotmail.com
+  email = bekzod97@hotmail.com
