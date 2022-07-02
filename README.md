@@ -6,6 +6,11 @@ Personal Configuration for my development environment
 ### Setup.sh
 
 - Submodule update before copying over files onto local computer
+    - Inside `~/.zshrc`, the `ZSH` should point to the .oh-my-zsh folder
+    - For example, the user path is under `/Users/bekzod` not `/Users/bekzodtursunov`
+        ```
+        export ZSH="/Users/bekzod/.oh-my-zsh"
+        ```
 
 ### Update.sh
 
