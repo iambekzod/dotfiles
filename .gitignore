@@ -1,0 +1,17 @@
+*
+!.gitconfig
+!.gitignore
+!.tmux.conf.personal
+!.vimrc
+!.zshrc.personal
+!Brewfile
+!Brewfile.work
+!*.sh
+!*.md
+
+!iterm2/
+!iterm2/**
+!nvim/
+!nvim/**
+!terminal-themes/
+!terminal-themes/**

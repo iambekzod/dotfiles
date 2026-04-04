@@ -1,6 +1,9 @@
 [alias]
   s = status -s
+
 [color "status"]
+  added = yellow
+  changed = green
   untracked = cyan
 
 [color "branch"]
@@ -13,5 +16,8 @@
   editor = vim
 
 [user]
-  name = Bekzod Tursunov
+  name = bekzod
   email = bekzod97@hotmail.com
+
+[push]
+    autoSetupRemote = true
