@@ -1,0 +1,22 @@
+# CLI tools
+brew "git"
+brew "wget"
+brew "curl"
+brew "tree"
+brew "tmux"
+brew "oven-sh/bun/bun"
+brew "fzf"
+brew "gh"
+brew "neovim"
+brew "ripgrep"
+brew "mise"
+brew "zsh"
+brew "zoxide"
+
+# Personal apps
+cask "firefox"
+cask "font-jetbrains-mono-nerd-font"
+cask "iterm2"
+cask "raycast"
+cask "rectangle"
+cask "oh-my-posh"

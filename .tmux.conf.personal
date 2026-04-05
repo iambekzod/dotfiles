@@ -1,0 +1,62 @@
+# Plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'Ataraxy-Labs/opensessions'
+set -g @plugin 'tmux-plugins/tmux-resurrect'
+set -g @plugin 'tmux-plugins/tmux-continuum'
+set -g @plugin 'christoomey/vim-tmux-navigator'
+
+# remap prefix from 'C-b' to 'C-a'
+unbind-key C-b
+set-option -g prefix C-a
+bind-key C-a send-prefix
+
+set -g default-terminal "tmux-256color"
+set -s extended-keys on
+set -as terminal-features ',xterm*:extkeys'
+
+# allow scroll
+set -g mouse on
+
+# Usability
+set -g base-index 1
+set -g renumber-windows on
+set -g escape-time 0
+set -g history-limit 50000
+
+# Vi copy mode with system clipboard
+set -g mode-keys vi
+set -g set-clipboard on
+
+# Pane: Arrow Movements
+bind-key Up select-pane -U
+bind-key Down select-pane -D
+bind-key Left select-pane -L
+bind-key Right select-pane -R
+
+# Navigate windows using prefix + h and prefix + l.
+bind-key -r h select-window -t :-
+bind-key -r l select-window -t :+
+
+# split panes using = and - (opens in current directory)
+bind = split-window -h -c "#{pane_current_path}"
+bind - split-window -v -c "#{pane_current_path}"
+unbind '"'
+unbind %
+
+# reload tmux config
+bind-key r source-file ~/.tmux.conf
+
+# Pane divider
+set-window-option -g pane-border-style fg=colour11,bg=colour234
+set-window-option -g pane-active-border-style fg=colour118,bg=colour234
+
+# Cool trick: Let's dim out any pane that's not active.
+set-window-option -g window-style fg=white,bg=colour236
+set-window-option -g window-active-style fg=white,bg=colour235
+
+# Session management
+bind S command-prompt -p "New session:" "new-session -s '%%'"
+bind K confirm-before -p "Kill session? (y/n)" kill-session
+
+# Initialize TPM (keep at bottom)
+run '~/.tmux/plugins/tpm/tpm'
