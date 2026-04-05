@@ -13,6 +13,9 @@ bind-key C-a send-prefix
 set -g default-terminal "tmux-256color"
 set -s extended-keys on
 set -as terminal-features ',xterm*:extkeys'
+set -as terminal-features ',xterm*:hyperlinks'
+set -as terminal-features ',xterm*:RGB'
+set -as terminal-features ',xterm*:clipboard'
 
 # allow scroll
 set -g mouse on
@@ -47,12 +50,12 @@ unbind %
 bind-key r source-file ~/.tmux.conf
 
 # Pane divider
-set-window-option -g pane-border-style fg=colour11,bg=colour234
-set-window-option -g pane-active-border-style fg=colour118,bg=colour234
+set-window-option -g pane-border-style fg=colour240
+set-window-option -g pane-active-border-style fg=colour75
 
 # Cool trick: Let's dim out any pane that's not active.
-set-window-option -g window-style fg=white,bg=colour236
-set-window-option -g window-active-style fg=white,bg=colour235
+set-window-option -g window-style fg=default,bg=#32333a
+set-window-option -g window-active-style fg=default,bg=#292a30
 
 # Session management
 bind S command-prompt -p "New session:" "new-session -s '%%'"
