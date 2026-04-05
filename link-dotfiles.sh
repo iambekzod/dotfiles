@@ -29,6 +29,11 @@ rm -f "$HOME/.config/nvim"
 ln -sf "$DOTFILES_DIR/nvim" "$HOME/.config/nvim"
 echo "Linked nvim config"
 
+# Symlink ghostty config (installed via brew cask)
+rm -f "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
+ln -sf "$DOTFILES_DIR/config.ghostty" "$HOME/Library/Application Support/com.mitchellh.ghostty/config.ghostty"
+echo "Linked ghostty config"
+
 # Helper: prepend a source line to a file if not already present
 prepend_source() {
     local source_line="$1"

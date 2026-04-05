@@ -6,11 +6,10 @@
 !.zshrc.personal
 !Brewfile
 !Brewfile.work
+!config.ghostty
 !*.sh
 !*.md
 
-!iterm2/
-!iterm2/**
 !nvim/
 !nvim/**
 !terminal-themes/

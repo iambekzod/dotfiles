@@ -14,9 +14,9 @@ brew "zsh"
 brew "zoxide"
 
 # Personal apps
+cask "ghostty"
 cask "firefox"
 cask "font-jetbrains-mono-nerd-font"
-cask "iterm2"
 cask "raycast"
 cask "rectangle"
 cask "oh-my-posh"
