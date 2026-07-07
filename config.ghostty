@@ -45,6 +45,7 @@ clipboard-paste-bracketed-safe = true
 
 # --- Shell Integration ---
 shell-integration = detect
+shell-integration-features = "ssh-terminfo,ssh-env"
 
 # --- Keybindings ---
 # Tabs
