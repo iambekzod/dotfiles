@@ -5,10 +5,10 @@ set -g @plugin 'tmux-plugins/tmux-resurrect'
 set -g @plugin 'tmux-plugins/tmux-continuum'
 set -g @plugin 'christoomey/vim-tmux-navigator'
 
-# remap prefix from 'C-b' to 'C-a'
+# remap prefix from 'C-b' to 'C-space'
 unbind-key C-b
-set-option -g prefix C-a
-bind-key C-a send-prefix
+set-option -g prefix C-Space
+bind-key C-Space send-prefix
 
 set -g default-terminal "tmux-256color"
 set -s extended-keys on
